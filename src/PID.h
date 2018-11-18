@@ -10,6 +10,9 @@ public:
   double i_error;
   double d_error;
 
+  double abs_error;
+  int n;
+
   /*
   * Coefficients
   */ 
@@ -41,6 +44,16 @@ public:
   * Calculate the total PID error.
   */
   double TotalError();
+
+  /*
+  * Calculate the average PID error.
+  */
+  double AvgError();
+
+  /*
+   * Calculates control output
+   */
+  double Control();
 };
 
 #endif /* PID_H */
